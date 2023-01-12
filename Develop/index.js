@@ -1,20 +1,18 @@
 // TODO: Include packages needed for this application
-
-// TODO: Create an array of questions for user input
-const questions = [
-    // Description
-    //Table of Contents
-    // Installation
-    // Usage
-    // License
-    // Contributing
-    // Tests
-    // Questions
-];
-
+// 
 const inquirer = require('inquirer');
 const fs = require('fs');
 
+
+// Description
+//Table of Contents
+// Installation
+// License
+// Contributing
+// Tests
+// DOUBLE CHECK OTHERS
+
+// Array of questions for user input
 inquirer
   .prompt([
     {
@@ -24,7 +22,7 @@ inquirer
     },
     {
       type: 'input',
-      message: "What are te=he instructions for installation?",
+      message: "What are the instructions for installation?",
       name: 'installation',
     },
     {
@@ -45,17 +43,39 @@ inquirer
     },
   ])
   .then((data) =>
-    response.confirm === response.password
-      ? console.log('Success!')
-      : console.log('You forgot your password already?!')
+    console.log(data),
+    // writeToFile(),
+    // init()
   );
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(data) {
+    fs.writeFile('readMeGenerated.md', data, (err) =>
+        err ? console.error(err) : console.log('Success!')
+        );
+    };
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    // paste readme file syntax in here
+    // `# Title n\
+    // ${title} n\
+    // ## Description n\
+    // ${description} n\
+    // <br> n\
+    // ## Table of Contents n\
+    // ${tableOfCont} n\
+    // <br> n\
+    // ## License n\
+    // ${license} n\
+    // <br> n\
+    // ## Contributors n\
+    // ${Contributors} n\
+    // <br> n\
+    // ## Tests n\
+    // ${tests} <br>`
+};
 
 // Function call to initialize app
 init();
