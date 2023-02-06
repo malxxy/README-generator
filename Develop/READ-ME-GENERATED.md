@@ -2,11 +2,11 @@
   ![](https://img.shields.io/badge/LICENSE-MIT-blue)
   <br>
 
-  # ReadMe File Generator
+  # Employee Database Navigation with MySQL
   <br>
 
   ## Description
-  This project powered by node.js generated a read me md file.
+  Use the terminal to view business departments, roles, and employee information. Option to add information to each database and update employee roles.
   <br>
   
   ## Table of Contents
@@ -19,11 +19,11 @@
   
   ## Installation
   To install necessary dependencies, run the following command:
-  npm i
+  npm i inquirer@8.2.4
   <br>
   
   ## Usage
-  N/A
+  Run "SOURCE schema.sql, "SOURCE seeds.sql" and SOURCE "query.sql" after installing inqiurer. Then run node server to launch the application.
   <br>
   
   ## License
